@@ -6,10 +6,10 @@
 */
 
 /**
-*  @defgroup ex4_lcd LCD Library
+*  @defgroup ex4_lcd LCD Character
 *  @code #include "lcd_lib.h" @endcode
 *
-*  @brief	LCD character library for avr with gcc
+*  @brief	LCD character library for avr with gcc. Support printf function and mixed mode pin.
 *
 *  @note	-
 *  @author	EX4 ekapujiw2002@gmail.com  http://ex4-tech.id.or.id
@@ -27,17 +27,12 @@
 /**
 * Use file stream or not (printf functionality)
 */
-#define LCD_USE_FILESTREAM	0
+#define LCD_USE_FILESTREAM	1
 
 #if LCD_USE_FILESTREAM == 1
 #include <stdio.h>
 #include <stdarg.h>
 #endif
-
-/**
-* Use mixed pin for lcd (1 = yes, 0 = no)
-*/
-#define LCD_MIXED_PIN	0
 
 //delay const
 /**
@@ -49,6 +44,57 @@
 * LCD delay for command in millisecond. ADJUST WITH YOUR OWN LCD!!!
 */
 #define LCD_CMD_DELAY		2
+
+/**
+* Use SIPO 74HC595 ic or not. If it is on then all the other pin arrangement will be ignored. \n
+* You need to use 74HC595 chip with the LCD pin connected as below configuration.
+*/
+#define LCD_USE_SIPO_74HC595	1
+
+#if LCD_USE_SIPO_74HC595 == 1
+
+/**
+* using sipo
+*/
+/**
+* SIPO 74HC595 pin connection
+*/
+#define HC595_PORT   	PORTB
+#define HC595_DDR    	DDRB
+#define HC595_DS_POS 	PB0      //Data pin (DS) pin location
+#define HC595_SH_CP_POS PB1      //Shift Clock (SH_CP) pin location
+#define HC595_ST_CP_POS PB2      //Store Clock (ST_CP) pin location
+
+/**
+* LCD pin arrangement. RW pin is tied to GND. Arrangement pin is free i.e. you can mix it
+*/
+#define LCD_SIPO_RS	0
+#define LCD_SIPO_EN	1
+#define LCD_SIPO_D4	5
+#define LCD_SIPO_D5	3
+#define LCD_SIPO_D6	2
+#define LCD_SIPO_D7	4
+
+/**
+* sipo constant define
+*/
+#define SIPO_LATCH_ON	1
+
+/**
+* Low level macros to change data (DS)lines
+*/
+#define HC595DataHigh() (HC595_PORT|=_BV(HC595_DS_POS))
+#define HC595DataLow() (HC595_PORT&=~_BV(HC595_DS_POS))
+
+#else
+
+/**
+* not using sipo
+*/
+/**
+* Use mixed pin for lcd (1 = yes, 0 = no)
+*/
+#define LCD_MIXED_PIN	0
 
 /**
 * Use pin LCD R/W or not. If not using busy flag then tied RW pin to GND
@@ -120,6 +166,7 @@
 #define LCD_D7_DDR	DDRB
 #define LCD_D7_PIN	PINB
 #define LCD_D7_BIT	PB7
+#endif
 #endif
 
 /**
