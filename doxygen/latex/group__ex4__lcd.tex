@@ -1,0 +1,739 @@
+\hypertarget{group__ex4__lcd}{\section{L\-C\-D Library}
+\label{group__ex4__lcd}\index{L\-C\-D Library@{L\-C\-D Library}}
+}
+
+
+L\-C\-D character library for avr with gcc.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlcd__struct}{lcd\-\_\-struct}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__ex4__lcd_gabcf42bd88b3c36193f301ca25b033875}{L\-C\-D\-\_\-\-P\-O\-R\-T}~P\-O\-R\-T\-B
+\item 
+\#define \hyperlink{group__ex4__lcd_ga152b3af754524f57cde037df1d8b7b29}{L\-C\-D\-\_\-\-D\-D\-R}~D\-D\-R\-B
+\item 
+\#define \hyperlink{group__ex4__lcd_ga43bf5ff1a3bba7fcc6f7ec44d172efe7}{L\-C\-D\-\_\-\-P\-I\-N}~P\-I\-N\-B
+\item 
+\#define \hyperlink{group__ex4__lcd_ga4781e073871c6f27f89b9463ad3a4ed1}{L\-C\-D\-\_\-\-R\-S}~0
+\item 
+\#define \hyperlink{group__ex4__lcd_ga26089a10ddd59a0dc7283c19ccc02533}{L\-C\-D\-\_\-\-R\-W}~1
+\item 
+\#define \hyperlink{group__ex4__lcd_ga1640ffbc0d8ec0f7edb04a2b93918072}{L\-C\-D\-\_\-\-E\-N}~2
+\item 
+\#define \hyperlink{group__ex4__lcd_ga6afd0d1d228af42a9280d63398fc6e5e}{L\-C\-D\-\_\-\-E\-N\-\_\-\-D\-E\-L\-A\-Y}~1
+\item 
+\#define \hyperlink{group__ex4__lcd_gabd61e4c479048bc94dc1bd416f1890cd}{L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y}~2
+\item 
+\#define \hyperlink{group__ex4__lcd_ga5105a7b435394f2000811d48ac5144fd}{U\-S\-E\-\_\-\-B\-U\-S\-Y\-\_\-\-F\-L\-A\-G}~1
+\item 
+\#define \hyperlink{group__ex4__lcd_ga811daed19f02855d3312ef1bff998f2f}{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-R\-A\-M}~2
+\item 
+\#define \hyperlink{group__ex4__lcd_ga0883c996256a447970de71ff34d036b1}{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-F\-L\-A\-S\-H}~1
+\item 
+\#define \hyperlink{group__ex4__lcd_ga459688213267d13ccfbeb2c9004988cb}{L\-C\-D\-\_\-\-C\-L\-R}~0
+\item 
+\#define \hyperlink{group__ex4__lcd_gae0e309ccad89222eb3457f2da9f2bb8d}{L\-C\-D\-\_\-\-H\-O\-M\-E}~1
+\item 
+\#define \hyperlink{group__ex4__lcd_gae5d757ddb6d94de8c82191b60b40e442}{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-M\-O\-D\-E}~2
+\item 
+\#define \hyperlink{group__ex4__lcd_gada766266a0be0d0040fbf86e23b58aa6}{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-I\-N\-C}~1
+\item 
+\#define \hyperlink{group__ex4__lcd_ga14d0c7fda147e0dc8cdaa4a2629b3532}{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-H\-I\-F\-T}~0
+\item 
+\#define \hyperlink{group__ex4__lcd_ga98ea2185740c931ae4d872059dd489b1}{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-T\-R\-L}~3
+\item 
+\#define \hyperlink{group__ex4__lcd_gae84f634b0a1661c4d5bbaafd9397732a}{L\-C\-D\-\_\-\-O\-N\-\_\-\-D\-I\-S\-P\-L\-A\-Y}~2
+\item 
+\#define \hyperlink{group__ex4__lcd_ga47638b5ebbaec9600a0ebf9a55caf802}{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-U\-R\-S\-O\-R}~1
+\item 
+\#define \hyperlink{group__ex4__lcd_ga5d76592a978537acee615098ce4d80f5}{L\-C\-D\-\_\-\-O\-N\-\_\-\-B\-L\-I\-N\-K}~0
+\item 
+\#define \hyperlink{group__ex4__lcd_ga3f4f758b80fcfa6c9e4db58e2515c78a}{L\-C\-D\-\_\-\-M\-O\-V\-E}~4
+\item 
+\#define \hyperlink{group__ex4__lcd_gaaddc2afa9a02bfa748950f2c1e6a204d}{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-D\-I\-S\-P}~3
+\item 
+\#define \hyperlink{group__ex4__lcd_ga97cdb19acf109ad52ab4994d2ad02cee}{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-R\-I\-G\-H\-T}~2
+\item 
+\#define \hyperlink{group__ex4__lcd_ga50de1697f1da8ab075a6b4d7aeace64e}{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}~5
+\item 
+\#define \hyperlink{group__ex4__lcd_ga91d15d8e3008f6cb141406a8b5d0d3c0}{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-8\-B\-I\-T}~4
+\item 
+\hypertarget{group__ex4__lcd_ga6c24806bed18d565917165caa3475463}{\#define {\bfseries L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-2\-L\-I\-N\-E\-S}~3}\label{group__ex4__lcd_ga6c24806bed18d565917165caa3475463}
+
+\item 
+\hypertarget{group__ex4__lcd_ga48de81358277fe4f2810c2b82f90397e}{\#define {\bfseries L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-10\-D\-O\-T\-S}~2}\label{group__ex4__lcd_ga48de81358277fe4f2810c2b82f90397e}
+
+\item 
+\hypertarget{group__ex4__lcd_ga3b38de74c362be1781fef1136aa9684c}{\#define {\bfseries L\-C\-D\-\_\-\-C\-G\-R\-A\-M}~6}\label{group__ex4__lcd_ga3b38de74c362be1781fef1136aa9684c}
+
+\item 
+\hypertarget{group__ex4__lcd_gae54acf3ccc45b7d6be334a03627740c6}{\#define {\bfseries L\-C\-D\-\_\-\-D\-D\-R\-A\-M}~7}\label{group__ex4__lcd_gae54acf3ccc45b7d6be334a03627740c6}
+
+\item 
+\hypertarget{group__ex4__lcd_gac8dd1658e235f174d1cabae5c438943d}{\#define {\bfseries L\-C\-D\-\_\-\-B\-U\-S\-Y}~7}\label{group__ex4__lcd_gac8dd1658e235f174d1cabae5c438943d}
+
+\item 
+\#define \hyperlink{group__ex4__lcd_ga01212e90283511562039db786f65ba98}{L\-C\-D\-\_\-\-L\-I\-N\-E\-S}~2
+\item 
+\hypertarget{group__ex4__lcd_gae59a728d9dee9f12c817b29d38746ed9}{\#define {\bfseries L\-C\-D\-\_\-\-L\-I\-N\-E\-\_\-\-L\-E\-N\-G\-T\-H}~16}\label{group__ex4__lcd_gae59a728d9dee9f12c817b29d38746ed9}
+
+\item 
+\#define \hyperlink{group__ex4__lcd_gaee2112f798cd153de3afb905653ca987}{L\-C\-D\-\_\-\-L\-I\-N\-E0\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R}~0x00
+\item 
+\hypertarget{group__ex4__lcd_gad965b49ee7837b0d99bbd5b5e2f83454}{\#define {\bfseries L\-C\-D\-\_\-\-L\-I\-N\-E1\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R}~0x40}\label{group__ex4__lcd_gad965b49ee7837b0d99bbd5b5e2f83454}
+
+\item 
+\hypertarget{group__ex4__lcd_gafacc9e73df471c77c004606efe6e3ffe}{\#define {\bfseries L\-C\-D\-\_\-\-L\-I\-N\-E2\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R}~0x14}\label{group__ex4__lcd_gafacc9e73df471c77c004606efe6e3ffe}
+
+\item 
+\hypertarget{group__ex4__lcd_ga8f667a445505409602337d961a995127}{\#define {\bfseries L\-C\-D\-\_\-\-L\-I\-N\-E3\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R}~0x54}\label{group__ex4__lcd_ga8f667a445505409602337d961a995127}
+
+\item 
+\hypertarget{group__ex4__lcd_ga8299126ee3ed92fc271bba9f0f16fa50}{\#define {\bfseries P\-R\-O\-G\-R\-E\-S\-S\-P\-I\-X\-E\-L\-S\-\_\-\-P\-E\-R\-\_\-\-C\-H\-A\-R}~6}\label{group__ex4__lcd_ga8299126ee3ed92fc271bba9f0f16fa50}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__ex4__lcd_gaccd6879dfbc1d7329824e4d44ecbfab9}{typedef struct \hyperlink{structlcd__struct}{lcd\-\_\-struct} \hyperlink{group__ex4__lcd_gaccd6879dfbc1d7329824e4d44ecbfab9}{lcd\-\_\-t}}\label{group__ex4__lcd_gaccd6879dfbc1d7329824e4d44ecbfab9}
+
+\begin{DoxyCompactList}\small\item\em L\-C\-D structure data type definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__ex4__lcd_ga77153afe052be2c883ce0e9c50eaf63d}{L\-C\-Dinit} ()
+\item 
+void \hyperlink{group__ex4__lcd_gafaa9fe41c1808137a3d32fd71372661c}{L\-C\-D\-Goto\-X\-Y} (const uint8\-\_\-t x, const uint8\-\_\-t y)
+\item 
+void \hyperlink{group__ex4__lcd_ga4710a0b6f36e342772ad947fa447d190}{L\-C\-Dsend\-Command} (const uint8\-\_\-t a\-Cmd)
+\item 
+void \hyperlink{group__ex4__lcd_gadb5ff187143f008fd0ed922676fa414f}{L\-C\-Dsend\-Char} (const uint8\-\_\-t a\-Data)
+\item 
+void \hyperlink{group__ex4__lcd_gad1cf8811db2211b747b0a93d4dc2a0d8}{L\-C\-Dstring} (uint8\-\_\-t $\ast$a\-Str, const uint8\-\_\-t Len)
+\item 
+void \hyperlink{group__ex4__lcd_gad15caf49a84798154ce0b0841f4eab4e}{L\-C\-Dclr} ()
+\item 
+void \hyperlink{group__ex4__lcd_ga4a8e4cac4b59cb6af62a246aa8762384}{L\-C\-Dhome} ()
+\item 
+void \hyperlink{group__ex4__lcd_ga46c67005c45823c6640631797705981b}{Copy\-Stringto\-L\-C\-D} (const uint8\-\_\-t $\ast$Flash\-Loc, const uint8\-\_\-t x, const uint8\-\_\-t y)
+\item 
+void \hyperlink{group__ex4__lcd_gafd1b77cff1d25838546f2e7c59d8ea6f}{L\-C\-Ddefinechar} (const uint8\-\_\-t $\ast$pc, uint8\-\_\-t char\-\_\-code)
+\item 
+void \hyperlink{group__ex4__lcd_gaa8b38038830831bf9f88f6fda050ddbc}{L\-C\-D\-Define\-Progress\-Bar\-Char} ()
+\item 
+void \hyperlink{group__ex4__lcd_gaa88c35fa982ea61de198ac213fd032e9}{L\-C\-Dshift\-Right} (const uint8\-\_\-t n)
+\item 
+void \hyperlink{group__ex4__lcd_gacc91628178929f4293a4e3b8be10d367}{L\-C\-Dshift\-Left} (const uint8\-\_\-t n)
+\item 
+void \hyperlink{group__ex4__lcd_gada84f0cf813b16535b072adca9c7f31e}{L\-C\-Dcursor\-On} ()
+\item 
+void \hyperlink{group__ex4__lcd_gadbceaac1e9d5eed34155fb24c85dd04e}{L\-C\-Dcursor\-On\-Blink} ()
+\item 
+void \hyperlink{group__ex4__lcd_ga11c2b242fbdc8d011ceb6160900c4c3b}{L\-C\-Dcursor\-O\-F\-F} ()
+\item 
+void \hyperlink{group__ex4__lcd_ga239e0192768dab01ffdfa81303fd294f}{L\-C\-Dblank} ()
+\item 
+void \hyperlink{group__ex4__lcd_ga8a720f0c43007e6f77df06f1f8d35806}{L\-C\-Dvisible} ()
+\item 
+void \hyperlink{group__ex4__lcd_ga894850f7ddadc87dfac4e11cfea348ef}{L\-C\-Dcursor\-Left} (const uint8\-\_\-t n)
+\item 
+void \hyperlink{group__ex4__lcd_ga4d38907bab78c36ca3fde0ad2bece2e1}{L\-C\-Dcursor\-Right} (const uint8\-\_\-t n)
+\item 
+void \hyperlink{group__ex4__lcd_gaede0b2008c99ed42726c7f2a05be4b68}{L\-C\-Dprogress\-Bar} (const uint8\-\_\-t x, const uint8\-\_\-t y, const uint8\-\_\-t progress, const uint8\-\_\-t maxprogress, const uint8\-\_\-t length)
+\item 
+void \hyperlink{group__ex4__lcd_gac5178c0922f0bbb88f2e763c58901075}{L\-C\-Dprintf} (const uint8\-\_\-t use\-\_\-flash, const uint8\-\_\-t xpos, const uint8\-\_\-t ypos, const char $\ast$fmt,...)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__ex4__lcd_gacc3964e16db84ad2659578e8735667f8}{struct \hyperlink{structlcd__struct}{lcd\-\_\-struct} {\bfseries lcd\-\_\-struct\-\_\-default}}\label{group__ex4__lcd_gacc3964e16db84ad2659578e8735667f8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\-C\-D character library for avr with gcc. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{ #include "lcd\_lib.h"} 
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+-\/ 
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+E\-X4 \href{mailto:ekapujiw2002@gmail.com}{\tt ekapujiw2002@gmail.\-com} \href{http://ex4-tech.id.or.id}{\tt http\-://ex4-\/tech.\-id.\-or.\-id} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__ex4__lcd_ga459688213267d13ccfbeb2c9004988cb}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-C\-L\-R@{L\-C\-D\-\_\-\-C\-L\-R}}
+\index{L\-C\-D\-\_\-\-C\-L\-R@{L\-C\-D\-\_\-\-C\-L\-R}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-C\-L\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-C\-L\-R~0}}\label{group__ex4__lcd_ga459688213267d13ccfbeb2c9004988cb}
+Clear L\-C\-D display \hypertarget{group__ex4__lcd_gabd61e4c479048bc94dc1bd416f1890cd}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y@{L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y}}
+\index{L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y@{L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-D\-E\-L\-A\-Y~2}}\label{group__ex4__lcd_gabd61e4c479048bc94dc1bd416f1890cd}
+L\-C\-D delay for command in microsend \hypertarget{group__ex4__lcd_ga152b3af754524f57cde037df1d8b7b29}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-D\-D\-R@{L\-C\-D\-\_\-\-D\-D\-R}}
+\index{L\-C\-D\-\_\-\-D\-D\-R@{L\-C\-D\-\_\-\-D\-D\-R}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-D\-D\-R~D\-D\-R\-B}}\label{group__ex4__lcd_ga152b3af754524f57cde037df1d8b7b29}
+D\-D\-R name for the L\-C\-D \hypertarget{group__ex4__lcd_ga1640ffbc0d8ec0f7edb04a2b93918072}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-E\-N@{L\-C\-D\-\_\-\-E\-N}}
+\index{L\-C\-D\-\_\-\-E\-N@{L\-C\-D\-\_\-\-E\-N}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-E\-N~2}}\label{group__ex4__lcd_ga1640ffbc0d8ec0f7edb04a2b93918072}
+Pin number for L\-C\-D E\-N \hypertarget{group__ex4__lcd_ga6afd0d1d228af42a9280d63398fc6e5e}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-E\-N\-\_\-\-D\-E\-L\-A\-Y@{L\-C\-D\-\_\-\-E\-N\-\_\-\-D\-E\-L\-A\-Y}}
+\index{L\-C\-D\-\_\-\-E\-N\-\_\-\-D\-E\-L\-A\-Y@{L\-C\-D\-\_\-\-E\-N\-\_\-\-D\-E\-L\-A\-Y}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-E\-N\-\_\-\-D\-E\-L\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-E\-N\-\_\-\-D\-E\-L\-A\-Y~1}}\label{group__ex4__lcd_ga6afd0d1d228af42a9280d63398fc6e5e}
+L\-C\-D delay for enable signal in microsecond \hypertarget{group__ex4__lcd_gada766266a0be0d0040fbf86e23b58aa6}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-I\-N\-C@{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-I\-N\-C}}
+\index{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-I\-N\-C@{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-I\-N\-C}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-I\-N\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-I\-N\-C~1}}\label{group__ex4__lcd_gada766266a0be0d0040fbf86e23b58aa6}
+Auto increment L\-C\-D cursor \hypertarget{group__ex4__lcd_gae5d757ddb6d94de8c82191b60b40e442}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-M\-O\-D\-E@{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-M\-O\-D\-E}}
+\index{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-M\-O\-D\-E@{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-M\-O\-D\-E}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-M\-O\-D\-E~2}}\label{group__ex4__lcd_gae5d757ddb6d94de8c82191b60b40e442}
+Set entry mode \hypertarget{group__ex4__lcd_ga14d0c7fda147e0dc8cdaa4a2629b3532}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-H\-I\-F\-T@{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-H\-I\-F\-T}}
+\index{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-H\-I\-F\-T@{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-H\-I\-F\-T}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-H\-I\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-H\-I\-F\-T~0}}\label{group__ex4__lcd_ga14d0c7fda147e0dc8cdaa4a2629b3532}
+Shift L\-C\-D cursor \hypertarget{group__ex4__lcd_ga50de1697f1da8ab075a6b4d7aeace64e}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N@{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}}
+\index{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N@{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N~5}}\label{group__ex4__lcd_ga50de1697f1da8ab075a6b4d7aeace64e}
+L\-C\-D function set \hypertarget{group__ex4__lcd_ga91d15d8e3008f6cb141406a8b5d0d3c0}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-8\-B\-I\-T@{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-8\-B\-I\-T}}
+\index{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-8\-B\-I\-T@{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-8\-B\-I\-T}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-8\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-8\-B\-I\-T~4}}\label{group__ex4__lcd_ga91d15d8e3008f6cb141406a8b5d0d3c0}
+8 bit interface bit definition \hypertarget{group__ex4__lcd_gae0e309ccad89222eb3457f2da9f2bb8d}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-H\-O\-M\-E@{L\-C\-D\-\_\-\-H\-O\-M\-E}}
+\index{L\-C\-D\-\_\-\-H\-O\-M\-E@{L\-C\-D\-\_\-\-H\-O\-M\-E}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-H\-O\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-H\-O\-M\-E~1}}\label{group__ex4__lcd_gae0e309ccad89222eb3457f2da9f2bb8d}
+Set cursor to home position \hypertarget{group__ex4__lcd_gaee2112f798cd153de3afb905653ca987}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-L\-I\-N\-E0\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R@{L\-C\-D\-\_\-\-L\-I\-N\-E0\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R}}
+\index{L\-C\-D\-\_\-\-L\-I\-N\-E0\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R@{L\-C\-D\-\_\-\-L\-I\-N\-E0\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-L\-I\-N\-E0\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-L\-I\-N\-E0\-\_\-\-D\-D\-R\-A\-M\-A\-D\-D\-R~0x00}}\label{group__ex4__lcd_gaee2112f798cd153de3afb905653ca987}
+L\-C\-D memory position for many lines \hypertarget{group__ex4__lcd_ga01212e90283511562039db786f65ba98}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-L\-I\-N\-E\-S@{L\-C\-D\-\_\-\-L\-I\-N\-E\-S}}
+\index{L\-C\-D\-\_\-\-L\-I\-N\-E\-S@{L\-C\-D\-\_\-\-L\-I\-N\-E\-S}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-L\-I\-N\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-L\-I\-N\-E\-S~2}}\label{group__ex4__lcd_ga01212e90283511562039db786f65ba98}
+L\-C\-D screen size row and column \hypertarget{group__ex4__lcd_ga3f4f758b80fcfa6c9e4db58e2515c78a}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-M\-O\-V\-E@{L\-C\-D\-\_\-\-M\-O\-V\-E}}
+\index{L\-C\-D\-\_\-\-M\-O\-V\-E@{L\-C\-D\-\_\-\-M\-O\-V\-E}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-M\-O\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-M\-O\-V\-E~4}}\label{group__ex4__lcd_ga3f4f758b80fcfa6c9e4db58e2515c78a}
+Move L\-C\-D cursor \hypertarget{group__ex4__lcd_gaaddc2afa9a02bfa748950f2c1e6a204d}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-D\-I\-S\-P@{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-D\-I\-S\-P}}
+\index{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-D\-I\-S\-P@{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-D\-I\-S\-P}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-D\-I\-S\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-D\-I\-S\-P~3}}\label{group__ex4__lcd_gaaddc2afa9a02bfa748950f2c1e6a204d}
+Move display \hypertarget{group__ex4__lcd_ga97cdb19acf109ad52ab4994d2ad02cee}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-R\-I\-G\-H\-T@{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-R\-I\-G\-H\-T}}
+\index{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-R\-I\-G\-H\-T@{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-R\-I\-G\-H\-T}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-R\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-M\-O\-V\-E\-\_\-\-R\-I\-G\-H\-T~2}}\label{group__ex4__lcd_ga97cdb19acf109ad52ab4994d2ad02cee}
+Move to the right \hypertarget{group__ex4__lcd_ga5d76592a978537acee615098ce4d80f5}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-O\-N\-\_\-\-B\-L\-I\-N\-K@{L\-C\-D\-\_\-\-O\-N\-\_\-\-B\-L\-I\-N\-K}}
+\index{L\-C\-D\-\_\-\-O\-N\-\_\-\-B\-L\-I\-N\-K@{L\-C\-D\-\_\-\-O\-N\-\_\-\-B\-L\-I\-N\-K}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-O\-N\-\_\-\-B\-L\-I\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-O\-N\-\_\-\-B\-L\-I\-N\-K~0}}\label{group__ex4__lcd_ga5d76592a978537acee615098ce4d80f5}
+Blinking cursor L\-C\-D \hypertarget{group__ex4__lcd_ga98ea2185740c931ae4d872059dd489b1}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-T\-R\-L@{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-T\-R\-L}}
+\index{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-T\-R\-L@{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-T\-R\-L}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-T\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-T\-R\-L~3}}\label{group__ex4__lcd_ga98ea2185740c931ae4d872059dd489b1}
+Cursor L\-C\-D control \hypertarget{group__ex4__lcd_ga47638b5ebbaec9600a0ebf9a55caf802}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-U\-R\-S\-O\-R@{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-U\-R\-S\-O\-R}}
+\index{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-U\-R\-S\-O\-R@{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-U\-R\-S\-O\-R}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-U\-R\-S\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-O\-N\-\_\-\-C\-U\-R\-S\-O\-R~1}}\label{group__ex4__lcd_ga47638b5ebbaec9600a0ebf9a55caf802}
+Cursor L\-C\-D on \hypertarget{group__ex4__lcd_gae84f634b0a1661c4d5bbaafd9397732a}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-O\-N\-\_\-\-D\-I\-S\-P\-L\-A\-Y@{L\-C\-D\-\_\-\-O\-N\-\_\-\-D\-I\-S\-P\-L\-A\-Y}}
+\index{L\-C\-D\-\_\-\-O\-N\-\_\-\-D\-I\-S\-P\-L\-A\-Y@{L\-C\-D\-\_\-\-O\-N\-\_\-\-D\-I\-S\-P\-L\-A\-Y}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-O\-N\-\_\-\-D\-I\-S\-P\-L\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-O\-N\-\_\-\-D\-I\-S\-P\-L\-A\-Y~2}}\label{group__ex4__lcd_gae84f634b0a1661c4d5bbaafd9397732a}
+Display on \hypertarget{group__ex4__lcd_ga43bf5ff1a3bba7fcc6f7ec44d172efe7}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-P\-I\-N@{L\-C\-D\-\_\-\-P\-I\-N}}
+\index{L\-C\-D\-\_\-\-P\-I\-N@{L\-C\-D\-\_\-\-P\-I\-N}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-P\-I\-N~P\-I\-N\-B}}\label{group__ex4__lcd_ga43bf5ff1a3bba7fcc6f7ec44d172efe7}
+P\-I\-N name for L\-C\-D \hypertarget{group__ex4__lcd_gabcf42bd88b3c36193f301ca25b033875}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-P\-O\-R\-T@{L\-C\-D\-\_\-\-P\-O\-R\-T}}
+\index{L\-C\-D\-\_\-\-P\-O\-R\-T@{L\-C\-D\-\_\-\-P\-O\-R\-T}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-P\-O\-R\-T~P\-O\-R\-T\-B}}\label{group__ex4__lcd_gabcf42bd88b3c36193f301ca25b033875}
+Port name for L\-C\-D \hypertarget{group__ex4__lcd_ga4781e073871c6f27f89b9463ad3a4ed1}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-R\-S@{L\-C\-D\-\_\-\-R\-S}}
+\index{L\-C\-D\-\_\-\-R\-S@{L\-C\-D\-\_\-\-R\-S}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-R\-S~0}}\label{group__ex4__lcd_ga4781e073871c6f27f89b9463ad3a4ed1}
+Pin number for L\-C\-D R\-S \hypertarget{group__ex4__lcd_ga26089a10ddd59a0dc7283c19ccc02533}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-R\-W@{L\-C\-D\-\_\-\-R\-W}}
+\index{L\-C\-D\-\_\-\-R\-W@{L\-C\-D\-\_\-\-R\-W}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-R\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-R\-W~1}}\label{group__ex4__lcd_ga26089a10ddd59a0dc7283c19ccc02533}
+Pin number for L\-C\-D R\-W \hypertarget{group__ex4__lcd_ga0883c996256a447970de71ff34d036b1}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-F\-L\-A\-S\-H@{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-F\-L\-A\-S\-H}}
+\index{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-F\-L\-A\-S\-H@{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-F\-L\-A\-S\-H}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-F\-L\-A\-S\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-F\-L\-A\-S\-H~1}}\label{group__ex4__lcd_ga0883c996256a447970de71ff34d036b1}
+Use data from flash memory \hypertarget{group__ex4__lcd_ga811daed19f02855d3312ef1bff998f2f}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-R\-A\-M@{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-R\-A\-M}}
+\index{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-R\-A\-M@{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-R\-A\-M}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-R\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-\_\-\-U\-S\-E\-\_\-\-R\-A\-M~2}}\label{group__ex4__lcd_ga811daed19f02855d3312ef1bff998f2f}
+Use data from ram \hypertarget{group__ex4__lcd_ga5105a7b435394f2000811d48ac5144fd}{\index{L\-C\-D Library@{L\-C\-D Library}!U\-S\-E\-\_\-\-B\-U\-S\-Y\-\_\-\-F\-L\-A\-G@{U\-S\-E\-\_\-\-B\-U\-S\-Y\-\_\-\-F\-L\-A\-G}}
+\index{U\-S\-E\-\_\-\-B\-U\-S\-Y\-\_\-\-F\-L\-A\-G@{U\-S\-E\-\_\-\-B\-U\-S\-Y\-\_\-\-F\-L\-A\-G}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{U\-S\-E\-\_\-\-B\-U\-S\-Y\-\_\-\-F\-L\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-E\-\_\-\-B\-U\-S\-Y\-\_\-\-F\-L\-A\-G~1}}\label{group__ex4__lcd_ga5105a7b435394f2000811d48ac5144fd}
+Use pin L\-C\-D R/\-W or not 
+
+\subsection{Function Documentation}
+\hypertarget{group__ex4__lcd_ga46c67005c45823c6640631797705981b}{\index{L\-C\-D Library@{L\-C\-D Library}!Copy\-Stringto\-L\-C\-D@{Copy\-Stringto\-L\-C\-D}}
+\index{Copy\-Stringto\-L\-C\-D@{Copy\-Stringto\-L\-C\-D}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{Copy\-Stringto\-L\-C\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Copy\-Stringto\-L\-C\-D (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t $\ast$}]{Flash\-Loc, }
+\item[{const uint8\-\_\-t}]{x, }
+\item[{const uint8\-\_\-t}]{y}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga46c67005c45823c6640631797705981b}
+Copy pgm string to lcd \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$\-Flash\-Loc} & Flash string \\
+\hline
+{\em x} & Row position \\
+\hline
+{\em y} & Column position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_ga239e0192768dab01ffdfa81303fd294f}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dblank@{L\-C\-Dblank}}
+\index{L\-C\-Dblank@{L\-C\-Dblank}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dblank}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dblank (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga239e0192768dab01ffdfa81303fd294f}
+L\-C\-D blank \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gad15caf49a84798154ce0b0841f4eab4e}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dclr@{L\-C\-Dclr}}
+\index{L\-C\-Dclr@{L\-C\-Dclr}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dclr}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dclr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gad15caf49a84798154ce0b0841f4eab4e}
+Clear screen \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_ga894850f7ddadc87dfac4e11cfea348ef}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dcursor\-Left@{L\-C\-Dcursor\-Left}}
+\index{L\-C\-Dcursor\-Left@{L\-C\-Dcursor\-Left}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dcursor\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dcursor\-Left (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga894850f7ddadc87dfac4e11cfea348ef}
+Cursor to the left \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Shift values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_ga11c2b242fbdc8d011ceb6160900c4c3b}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dcursor\-O\-F\-F@{L\-C\-Dcursor\-O\-F\-F}}
+\index{L\-C\-Dcursor\-O\-F\-F@{L\-C\-Dcursor\-O\-F\-F}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dcursor\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dcursor\-O\-F\-F (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga11c2b242fbdc8d011ceb6160900c4c3b}
+Cursor off \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gada84f0cf813b16535b072adca9c7f31e}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dcursor\-On@{L\-C\-Dcursor\-On}}
+\index{L\-C\-Dcursor\-On@{L\-C\-Dcursor\-On}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dcursor\-On}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dcursor\-On (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gada84f0cf813b16535b072adca9c7f31e}
+Cursor on \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gadbceaac1e9d5eed34155fb24c85dd04e}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dcursor\-On\-Blink@{L\-C\-Dcursor\-On\-Blink}}
+\index{L\-C\-Dcursor\-On\-Blink@{L\-C\-Dcursor\-On\-Blink}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dcursor\-On\-Blink}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dcursor\-On\-Blink (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gadbceaac1e9d5eed34155fb24c85dd04e}
+Cursor on and blinking \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_ga4d38907bab78c36ca3fde0ad2bece2e1}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dcursor\-Right@{L\-C\-Dcursor\-Right}}
+\index{L\-C\-Dcursor\-Right@{L\-C\-Dcursor\-Right}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dcursor\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dcursor\-Right (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga4d38907bab78c36ca3fde0ad2bece2e1}
+Cursor to the right \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Shift values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gafd1b77cff1d25838546f2e7c59d8ea6f}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Ddefinechar@{L\-C\-Ddefinechar}}
+\index{L\-C\-Ddefinechar@{L\-C\-Ddefinechar}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Ddefinechar}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Ddefinechar (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t $\ast$}]{pc, }
+\item[{uint8\-\_\-t}]{char\-\_\-code}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gafd1b77cff1d25838546f2e7c59d8ea6f}
+Define custom char \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$pc} & Flash memori for the custo char data \\
+\hline
+{\em char\-\_\-code} & Character code to be used(0-\/7) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gaa8b38038830831bf9f88f6fda050ddbc}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-Define\-Progress\-Bar\-Char@{L\-C\-D\-Define\-Progress\-Bar\-Char}}
+\index{L\-C\-D\-Define\-Progress\-Bar\-Char@{L\-C\-D\-Define\-Progress\-Bar\-Char}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-Define\-Progress\-Bar\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-D\-Define\-Progress\-Bar\-Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gaa8b38038830831bf9f88f6fda050ddbc}
+Define progress bar char as char0-\/5 \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gafaa9fe41c1808137a3d32fd71372661c}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-D\-Goto\-X\-Y@{L\-C\-D\-Goto\-X\-Y}}
+\index{L\-C\-D\-Goto\-X\-Y@{L\-C\-D\-Goto\-X\-Y}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-D\-Goto\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-D\-Goto\-X\-Y (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{x, }
+\item[{const uint8\-\_\-t}]{y}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gafaa9fe41c1808137a3d32fd71372661c}
+Go to a lcd position cursor \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & L\-C\-D row from 0 \\
+\hline
+{\em y} & L\-C\-D column from 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_ga4a8e4cac4b59cb6af62a246aa8762384}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dhome@{L\-C\-Dhome}}
+\index{L\-C\-Dhome@{L\-C\-Dhome}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dhome}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dhome (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga4a8e4cac4b59cb6af62a246aa8762384}
+Back to home cursor \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_ga77153afe052be2c883ce0e9c50eaf63d}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dinit@{L\-C\-Dinit}}
+\index{L\-C\-Dinit@{L\-C\-Dinit}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dinit}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dinit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga77153afe052be2c883ce0e9c50eaf63d}
+Initialize L\-C\-D pin setting and data \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gac5178c0922f0bbb88f2e763c58901075}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dprintf@{L\-C\-Dprintf}}
+\index{L\-C\-Dprintf@{L\-C\-Dprintf}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dprintf}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dprintf (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{use\-\_\-flash, }
+\item[{const uint8\-\_\-t}]{xpos, }
+\item[{const uint8\-\_\-t}]{ypos, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gac5178c0922f0bbb88f2e763c58901075}
+Print to lcd using printf \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em use\-\_\-flash} & Format from R\-A\-M or F\-L\-A\-S\-H \\
+\hline
+{\em xpos} & Row position \\
+\hline
+{\em ypos} & Column position \\
+\hline
+{\em $\ast$fmt} & Format of data \\
+\hline
+{\em ...} & Argument list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gaede0b2008c99ed42726c7f2a05be4b68}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dprogress\-Bar@{L\-C\-Dprogress\-Bar}}
+\index{L\-C\-Dprogress\-Bar@{L\-C\-Dprogress\-Bar}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dprogress\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dprogress\-Bar (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{x, }
+\item[{const uint8\-\_\-t}]{y, }
+\item[{const uint8\-\_\-t}]{progress, }
+\item[{const uint8\-\_\-t}]{maxprogress, }
+\item[{const uint8\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gaede0b2008c99ed42726c7f2a05be4b68}
+Displays a horizontal progress bar at the current cursor location. adapted from A\-V\-R\-L\-I\-B -\/ displays progress only for 8 bit variables \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Row position \\
+\hline
+{\em y} & Column position \\
+\hline
+{\em progress} & Value the bargraph should indicate \\
+\hline
+{\em maxprogress} & Value at the end of the bargraph \\
+\hline
+{\em length} & Number of L\-C\-D characters that the bargraph should cover \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gadb5ff187143f008fd0ed922676fa414f}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dsend\-Char@{L\-C\-Dsend\-Char}}
+\index{L\-C\-Dsend\-Char@{L\-C\-Dsend\-Char}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dsend\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dsend\-Char (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{a\-Data}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gadb5ff187143f008fd0ed922676fa414f}
+Send char to lcd \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Data} & Char to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_ga4710a0b6f36e342772ad947fa447d190}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dsend\-Command@{L\-C\-Dsend\-Command}}
+\index{L\-C\-Dsend\-Command@{L\-C\-Dsend\-Command}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dsend\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dsend\-Command (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{a\-Cmd}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga4710a0b6f36e342772ad947fa447d190}
+Send command to lcd \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Cmd} & Command to be sent to L\-C\-D controller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gacc91628178929f4293a4e3b8be10d367}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dshift\-Left@{L\-C\-Dshift\-Left}}
+\index{L\-C\-Dshift\-Left@{L\-C\-Dshift\-Left}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dshift\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dshift\-Left (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gacc91628178929f4293a4e3b8be10d367}
+Shift display left \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Shift values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gaa88c35fa982ea61de198ac213fd032e9}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dshift\-Right@{L\-C\-Dshift\-Right}}
+\index{L\-C\-Dshift\-Right@{L\-C\-Dshift\-Right}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dshift\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dshift\-Right (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gaa88c35fa982ea61de198ac213fd032e9}
+Shift display right \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Shift values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_gad1cf8811db2211b747b0a93d4dc2a0d8}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dstring@{L\-C\-Dstring}}
+\index{L\-C\-Dstring@{L\-C\-Dstring}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dstring}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dstring (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{a\-Str, }
+\item[{const uint8\-\_\-t}]{Len}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_gad1cf8811db2211b747b0a93d4dc2a0d8}
+Send string from R\-A\-M. Just use L\-C\-Dprintf function \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Str} & String to be sent \\
+\hline
+{\em Len} & String length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__lcd_ga8a720f0c43007e6f77df06f1f8d35806}{\index{L\-C\-D Library@{L\-C\-D Library}!L\-C\-Dvisible@{L\-C\-Dvisible}}
+\index{L\-C\-Dvisible@{L\-C\-Dvisible}!LCD Library@{L\-C\-D Library}}
+\subsubsection[{L\-C\-Dvisible}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-Dvisible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__lcd_ga8a720f0c43007e6f77df06f1f8d35806}
+Make L\-C\-D visible \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}

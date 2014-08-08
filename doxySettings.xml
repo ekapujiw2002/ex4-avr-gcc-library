@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DoxySettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SettingsFile>D:\HDD_C2\avr-project\EX4-AVR-PROJECTS\ex4-avr-gcc-library\doxySettings.xml</SettingsFile>
+  <ProjectName>ex4-avr-gcc-library</ProjectName>
+  <DoxyExePath>C:\Users\EX4\AppData\Local\Atmel\AtmelStudio\6.1\Extensions\Atmel\Doxygen Integrator\6.1.0.6\Doxygen/doxygen.exe</DoxyExePath>
+  <UseDefaultSettings>true</UseDefaultSettings>
+  <GenerateAsPartOfBuild>false</GenerateAsPartOfBuild>
+  <ConfigFilePath>D:\HDD_C2\avr-project\EX4-AVR-PROJECTS\ex4-avr-gcc-library\doxyfile</ConfigFilePath>
+  <OutputDirPath>D:\HDD_C2\avr-project\EX4-AVR-PROJECTS\ex4-avr-gcc-library\doxygen</OutputDirPath>
+  <ShowErrorsAndWarnings>false</ShowErrorsAndWarnings>
+</DoxySettings>

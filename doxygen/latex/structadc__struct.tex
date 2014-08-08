@@ -1,0 +1,88 @@
+\hypertarget{structadc__struct}{\section{adc\-\_\-struct Struct Reference}
+\label{structadc__struct}\index{adc\-\_\-struct@{adc\-\_\-struct}}
+}
+
+
+{\ttfamily \#include $<$adc.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \hyperlink{structadc__struct_a4f53c0113b4dfa7f06084c3bcbe34efa}{init} )(const uint8\-\_\-t Vref, const uint8\-\_\-t Data\-Bit, const uint8\-\_\-t Psc)
+\item 
+uint16\-\_\-t($\ast$ \hyperlink{structadc__struct_ab1d37058d26e55c8d0e9df1d23e48380}{read} )(const uint8\-\_\-t a\-Channel)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-D\-C structure data \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$init} & Initialize adc setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+A\-D\-C\-\_\-\-Init 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$read} & Read adc data from a channel \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+A\-D\-C\-\_\-\-Read\-Data 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+-\/ A\-D\-C structure data type definition 
+\end{DoxyReturn}
+
+
+\subsection{Field Documentation}
+\hypertarget{structadc__struct_a4f53c0113b4dfa7f06084c3bcbe34efa}{\index{adc\-\_\-struct@{adc\-\_\-struct}!init@{init}}
+\index{init@{init}!adc_struct@{adc\-\_\-struct}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ adc\-\_\-struct\-::init)(const uint8\-\_\-t Vref, const uint8\-\_\-t Data\-Bit, const uint8\-\_\-t Psc)}}\label{structadc__struct_a4f53c0113b4dfa7f06084c3bcbe34efa}
+Init A\-D\-C with selected voltage reference, data bit, and clock prescaler \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em Vref} & A\-D\-C voltage reference \\
+\hline
+{\em Data\-Bit} & A\-D\-C bit resolution \\
+\hline
+{\em Psc} & A\-D\-C clock prescaler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{structadc__struct_ab1d37058d26e55c8d0e9df1d23e48380}{\index{adc\-\_\-struct@{adc\-\_\-struct}!read@{read}}
+\index{read@{read}!adc_struct@{adc\-\_\-struct}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t($\ast$ adc\-\_\-struct\-::read)(const uint8\-\_\-t a\-Channel)}}\label{structadc__struct_ab1d37058d26e55c8d0e9df1d23e48380}
+Get A\-D\-C data from channel 0-\/7 \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Channel} & A\-D\-C channel 0-\/7 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-D\-C data value 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+adc.\-h\end{DoxyCompactItemize}

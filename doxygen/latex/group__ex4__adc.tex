@@ -1,0 +1,228 @@
+\hypertarget{group__ex4__adc}{\section{A\-D\-C}
+\label{group__ex4__adc}\index{A\-D\-C@{A\-D\-C}}
+}
+
+
+A\-D\-C A\-V\-R internal library.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structadc__struct}{adc\-\_\-struct}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__ex4__adc_gabca684824d1a447a7ddb9375efaec794}{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-R\-E\-F}~0
+\item 
+\#define \hyperlink{group__ex4__adc_gad8c99ef2e1a54e5ac6ac5f2a46609fdc}{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-V\-C\-C}~1
+\item 
+\#define \hyperlink{group__ex4__adc_ga2da1d74b5e84e23e53be679cf9a92ed5}{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L}~3
+\item 
+\#define \hyperlink{group__ex4__adc_gae57d5a32e1a79311452cc1cdcb570614}{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-8\-B\-I\-T}~1
+\item 
+\#define \hyperlink{group__ex4__adc_ga166c1f0adb5ea80087faac7746224568}{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-10\-B\-I\-T}~0
+\item 
+\#define \hyperlink{group__ex4__adc_ga1e33b83bfcf4433eb2e8c6e818b5dff8}{A\-D\-C\-\_\-\-C\-H0}~0
+\item 
+\#define \hyperlink{group__ex4__adc_ga7d351ed34ca3ff55d1681ee84a243090}{A\-D\-C\-\_\-\-C\-H1}~1
+\item 
+\#define \hyperlink{group__ex4__adc_ga2bb0c1b2de3aa355244417d9a42a8966}{A\-D\-C\-\_\-\-C\-H2}~2
+\item 
+\#define \hyperlink{group__ex4__adc_ga6ae98bab335f9d073a58d70e7ba4f844}{A\-D\-C\-\_\-\-C\-H3}~3
+\item 
+\#define \hyperlink{group__ex4__adc_ga3648bb19b5c3735452fee16c835afc43}{A\-D\-C\-\_\-\-C\-H4}~4
+\item 
+\#define \hyperlink{group__ex4__adc_ga479d965dae60f80b698f0dd6a348e30a}{A\-D\-C\-\_\-\-C\-H5}~5
+\item 
+\#define \hyperlink{group__ex4__adc_gaec122320eeb7216887651ef5f1c73442}{A\-D\-C\-\_\-\-C\-H6}~6
+\item 
+\#define \hyperlink{group__ex4__adc_gaea897f597c4ee7b003920953fb213638}{A\-D\-C\-\_\-\-C\-H7}~7
+\item 
+\#define \hyperlink{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}{A\-D\-C\-\_\-\-P\-S\-C2}~1
+\item 
+\#define \hyperlink{group__ex4__adc_ga6c2340ea20750be3852fb32e629a7091}{A\-D\-C\-\_\-\-P\-S\-C4}~(\hyperlink{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}{A\-D\-C\-\_\-\-P\-S\-C2}+1)
+\item 
+\#define \hyperlink{group__ex4__adc_gaaca57247c775b90985187abd9306e7e2}{A\-D\-C\-\_\-\-P\-S\-C8}~(\hyperlink{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}{A\-D\-C\-\_\-\-P\-S\-C2}+2)
+\item 
+\#define \hyperlink{group__ex4__adc_ga4d372cc3fd8e1590ba3c73d22d54115c}{A\-D\-C\-\_\-\-P\-S\-C16}~(\hyperlink{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}{A\-D\-C\-\_\-\-P\-S\-C2}+3)
+\item 
+\#define \hyperlink{group__ex4__adc_ga0e7e1b2aaf0da2d28cabe6ed160da553}{A\-D\-C\-\_\-\-P\-S\-C32}~(\hyperlink{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}{A\-D\-C\-\_\-\-P\-S\-C2}+4)
+\item 
+\#define \hyperlink{group__ex4__adc_ga20fdb2079b33236cb1c64bbe68677c4d}{A\-D\-C\-\_\-\-P\-S\-C64}~(\hyperlink{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}{A\-D\-C\-\_\-\-P\-S\-C2}+5)
+\item 
+\#define \hyperlink{group__ex4__adc_ga0d1ee1a83dd4cc2104ddb943a06b881b}{A\-D\-C\-\_\-\-P\-S\-C128}~(\hyperlink{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}{A\-D\-C\-\_\-\-P\-S\-C2}+6)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structadc__struct}{adc\-\_\-struct} \hyperlink{group__ex4__adc_ga31d20334b42de2bbff807124b0984a90}{adc\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__ex4__adc_ga31d20334b42de2bbff807124b0984a90}{adc\-\_\-t} $\ast$ \hyperlink{group__ex4__adc_ga91d781b98c410d6e5ccc290e20f989d5}{new\-\_\-adc} (const uint8\-\_\-t Vref, const uint8\-\_\-t Data\-Bit, const uint8\-\_\-t Psc)
+\item 
+void \hyperlink{group__ex4__adc_gaee86604d9a26fc96badb43239e639c38}{delete\-\_\-adc} (\hyperlink{group__ex4__adc_ga31d20334b42de2bbff807124b0984a90}{adc\-\_\-t} $\ast$adc\-\_\-obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-D\-C A\-V\-R internal library. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{ #include "adc.h"} 
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+-\/ 
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+E\-X4 \href{mailto:ekapujiw2002@gmail.com}{\tt ekapujiw2002@gmail.\-com} \href{http://ex4-tech.id.or.id}{\tt http\-://ex4-\/tech.\-id.\-or.\-id} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__ex4__adc_ga1e33b83bfcf4433eb2e8c6e818b5dff8}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-C\-H0@{A\-D\-C\-\_\-\-C\-H0}}
+\index{A\-D\-C\-\_\-\-C\-H0@{A\-D\-C\-\_\-\-C\-H0}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-C\-H0}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-C\-H0~0}}\label{group__ex4__adc_ga1e33b83bfcf4433eb2e8c6e818b5dff8}
+A\-D\-C channel 0 \hypertarget{group__ex4__adc_ga7d351ed34ca3ff55d1681ee84a243090}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-C\-H1@{A\-D\-C\-\_\-\-C\-H1}}
+\index{A\-D\-C\-\_\-\-C\-H1@{A\-D\-C\-\_\-\-C\-H1}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-C\-H1}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-C\-H1~1}}\label{group__ex4__adc_ga7d351ed34ca3ff55d1681ee84a243090}
+A\-D\-C channel 1 \hypertarget{group__ex4__adc_ga2bb0c1b2de3aa355244417d9a42a8966}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-C\-H2@{A\-D\-C\-\_\-\-C\-H2}}
+\index{A\-D\-C\-\_\-\-C\-H2@{A\-D\-C\-\_\-\-C\-H2}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-C\-H2}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-C\-H2~2}}\label{group__ex4__adc_ga2bb0c1b2de3aa355244417d9a42a8966}
+A\-D\-C channel 2 \hypertarget{group__ex4__adc_ga6ae98bab335f9d073a58d70e7ba4f844}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-C\-H3@{A\-D\-C\-\_\-\-C\-H3}}
+\index{A\-D\-C\-\_\-\-C\-H3@{A\-D\-C\-\_\-\-C\-H3}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-C\-H3}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-C\-H3~3}}\label{group__ex4__adc_ga6ae98bab335f9d073a58d70e7ba4f844}
+A\-D\-C channel 3 \hypertarget{group__ex4__adc_ga3648bb19b5c3735452fee16c835afc43}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-C\-H4@{A\-D\-C\-\_\-\-C\-H4}}
+\index{A\-D\-C\-\_\-\-C\-H4@{A\-D\-C\-\_\-\-C\-H4}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-C\-H4}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-C\-H4~4}}\label{group__ex4__adc_ga3648bb19b5c3735452fee16c835afc43}
+A\-D\-C channel 4 \hypertarget{group__ex4__adc_ga479d965dae60f80b698f0dd6a348e30a}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-C\-H5@{A\-D\-C\-\_\-\-C\-H5}}
+\index{A\-D\-C\-\_\-\-C\-H5@{A\-D\-C\-\_\-\-C\-H5}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-C\-H5}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-C\-H5~5}}\label{group__ex4__adc_ga479d965dae60f80b698f0dd6a348e30a}
+A\-D\-C channel 5 \hypertarget{group__ex4__adc_gaec122320eeb7216887651ef5f1c73442}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-C\-H6@{A\-D\-C\-\_\-\-C\-H6}}
+\index{A\-D\-C\-\_\-\-C\-H6@{A\-D\-C\-\_\-\-C\-H6}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-C\-H6}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-C\-H6~6}}\label{group__ex4__adc_gaec122320eeb7216887651ef5f1c73442}
+A\-D\-C channel 6 \hypertarget{group__ex4__adc_gaea897f597c4ee7b003920953fb213638}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-C\-H7@{A\-D\-C\-\_\-\-C\-H7}}
+\index{A\-D\-C\-\_\-\-C\-H7@{A\-D\-C\-\_\-\-C\-H7}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-C\-H7}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-C\-H7~7}}\label{group__ex4__adc_gaea897f597c4ee7b003920953fb213638}
+A\-D\-C channel 7 \hypertarget{group__ex4__adc_ga166c1f0adb5ea80087faac7746224568}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-10\-B\-I\-T@{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-10\-B\-I\-T}}
+\index{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-10\-B\-I\-T@{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-10\-B\-I\-T}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-10\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-10\-B\-I\-T~0}}\label{group__ex4__adc_ga166c1f0adb5ea80087faac7746224568}
+A\-D\-C output at 10 bit resolution \hypertarget{group__ex4__adc_gae57d5a32e1a79311452cc1cdcb570614}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-8\-B\-I\-T@{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-8\-B\-I\-T}}
+\index{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-8\-B\-I\-T@{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-8\-B\-I\-T}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-8\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-D\-A\-T\-A\-\_\-8\-B\-I\-T~1}}\label{group__ex4__adc_gae57d5a32e1a79311452cc1cdcb570614}
+A\-D\-C output at 8 bit resolution \hypertarget{group__ex4__adc_ga0d1ee1a83dd4cc2104ddb943a06b881b}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-P\-S\-C128@{A\-D\-C\-\_\-\-P\-S\-C128}}
+\index{A\-D\-C\-\_\-\-P\-S\-C128@{A\-D\-C\-\_\-\-P\-S\-C128}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-P\-S\-C128}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-P\-S\-C128~({\bf A\-D\-C\-\_\-\-P\-S\-C2}+6)}}\label{group__ex4__adc_ga0d1ee1a83dd4cc2104ddb943a06b881b}
+A\-D\-C clock prescaler 128 \hypertarget{group__ex4__adc_ga4d372cc3fd8e1590ba3c73d22d54115c}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-P\-S\-C16@{A\-D\-C\-\_\-\-P\-S\-C16}}
+\index{A\-D\-C\-\_\-\-P\-S\-C16@{A\-D\-C\-\_\-\-P\-S\-C16}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-P\-S\-C16}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-P\-S\-C16~({\bf A\-D\-C\-\_\-\-P\-S\-C2}+3)}}\label{group__ex4__adc_ga4d372cc3fd8e1590ba3c73d22d54115c}
+A\-D\-C clock prescaler 16 \hypertarget{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-P\-S\-C2@{A\-D\-C\-\_\-\-P\-S\-C2}}
+\index{A\-D\-C\-\_\-\-P\-S\-C2@{A\-D\-C\-\_\-\-P\-S\-C2}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-P\-S\-C2}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-P\-S\-C2~1}}\label{group__ex4__adc_ga17dcbe58ddaee17c0a9240f875c5fafa}
+A\-D\-C clock prescaler 1 \hypertarget{group__ex4__adc_ga0e7e1b2aaf0da2d28cabe6ed160da553}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-P\-S\-C32@{A\-D\-C\-\_\-\-P\-S\-C32}}
+\index{A\-D\-C\-\_\-\-P\-S\-C32@{A\-D\-C\-\_\-\-P\-S\-C32}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-P\-S\-C32}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-P\-S\-C32~({\bf A\-D\-C\-\_\-\-P\-S\-C2}+4)}}\label{group__ex4__adc_ga0e7e1b2aaf0da2d28cabe6ed160da553}
+A\-D\-C clock prescaler 32 \hypertarget{group__ex4__adc_ga6c2340ea20750be3852fb32e629a7091}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-P\-S\-C4@{A\-D\-C\-\_\-\-P\-S\-C4}}
+\index{A\-D\-C\-\_\-\-P\-S\-C4@{A\-D\-C\-\_\-\-P\-S\-C4}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-P\-S\-C4}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-P\-S\-C4~({\bf A\-D\-C\-\_\-\-P\-S\-C2}+1)}}\label{group__ex4__adc_ga6c2340ea20750be3852fb32e629a7091}
+A\-D\-C clock prescaler 4 \hypertarget{group__ex4__adc_ga20fdb2079b33236cb1c64bbe68677c4d}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-P\-S\-C64@{A\-D\-C\-\_\-\-P\-S\-C64}}
+\index{A\-D\-C\-\_\-\-P\-S\-C64@{A\-D\-C\-\_\-\-P\-S\-C64}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-P\-S\-C64}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-P\-S\-C64~({\bf A\-D\-C\-\_\-\-P\-S\-C2}+5)}}\label{group__ex4__adc_ga20fdb2079b33236cb1c64bbe68677c4d}
+A\-D\-C clock prescaler 64 \hypertarget{group__ex4__adc_gaaca57247c775b90985187abd9306e7e2}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-P\-S\-C8@{A\-D\-C\-\_\-\-P\-S\-C8}}
+\index{A\-D\-C\-\_\-\-P\-S\-C8@{A\-D\-C\-\_\-\-P\-S\-C8}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-P\-S\-C8}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-P\-S\-C8~({\bf A\-D\-C\-\_\-\-P\-S\-C2}+2)}}\label{group__ex4__adc_gaaca57247c775b90985187abd9306e7e2}
+A\-D\-C clock prescaler 8 \hypertarget{group__ex4__adc_gabca684824d1a447a7ddb9375efaec794}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-R\-E\-F@{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-R\-E\-F}}
+\index{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-R\-E\-F@{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-R\-E\-F}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-R\-E\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-R\-E\-F~0}}\label{group__ex4__adc_gabca684824d1a447a7ddb9375efaec794}
+Standard library A\-V\-R library A\-D\-C reference external voltage \hypertarget{group__ex4__adc_gad8c99ef2e1a54e5ac6ac5f2a46609fdc}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-V\-C\-C@{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-V\-C\-C}}
+\index{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-V\-C\-C@{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-V\-C\-C}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-V\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-A\-V\-C\-C~1}}\label{group__ex4__adc_gad8c99ef2e1a54e5ac6ac5f2a46609fdc}
+A\-D\-C reference same as V\-C\-C \hypertarget{group__ex4__adc_ga2da1d74b5e84e23e53be679cf9a92ed5}{\index{A\-D\-C@{A\-D\-C}!A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L@{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L}}
+\index{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L@{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L}!ADC@{A\-D\-C}}
+\subsubsection[{A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-C\-\_\-\-V\-R\-E\-F\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L~3}}\label{group__ex4__adc_ga2da1d74b5e84e23e53be679cf9a92ed5}
+A\-D\-C reference using internal reference 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__ex4__adc_ga31d20334b42de2bbff807124b0984a90}{\index{A\-D\-C@{A\-D\-C}!adc\-\_\-t@{adc\-\_\-t}}
+\index{adc\-\_\-t@{adc\-\_\-t}!ADC@{A\-D\-C}}
+\subsubsection[{adc\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf adc\-\_\-struct}  {\bf adc\-\_\-t}}}\label{group__ex4__adc_ga31d20334b42de2bbff807124b0984a90}
+A\-D\-C structure data \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$init} & Initialize adc setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+A\-D\-C\-\_\-\-Init 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$read} & Read adc data from a channel \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+A\-D\-C\-\_\-\-Read\-Data 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+-\/ A\-D\-C structure data type definition 
+\end{DoxyReturn}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__ex4__adc_gaee86604d9a26fc96badb43239e639c38}{\index{A\-D\-C@{A\-D\-C}!delete\-\_\-adc@{delete\-\_\-adc}}
+\index{delete\-\_\-adc@{delete\-\_\-adc}!ADC@{A\-D\-C}}
+\subsubsection[{delete\-\_\-adc}]{\setlength{\rightskip}{0pt plus 5cm}void delete\-\_\-adc (
+\begin{DoxyParamCaption}
+\item[{{\bf adc\-\_\-t} $\ast$}]{adc\-\_\-obj}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__adc_gaee86604d9a26fc96badb43239e639c38}
+Destroy adc object \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$adc\-\_\-obj} & A\-D\-C object to be destroyed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__adc_ga91d781b98c410d6e5ccc290e20f989d5}{\index{A\-D\-C@{A\-D\-C}!new\-\_\-adc@{new\-\_\-adc}}
+\index{new\-\_\-adc@{new\-\_\-adc}!ADC@{A\-D\-C}}
+\subsubsection[{new\-\_\-adc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf adc\-\_\-t}$\ast$ new\-\_\-adc (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{Vref, }
+\item[{const uint8\-\_\-t}]{Data\-Bit, }
+\item[{const uint8\-\_\-t}]{Psc}
+\end{DoxyParamCaption}
+)}}\label{group__ex4__adc_ga91d781b98c410d6e5ccc290e20f989d5}
+Set a default value to be used. Make sure it is  and  Init A\-D\-C and create the object \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em Vref} & A\-D\-C voltage reference \\
+\hline
+{\em Data\-Bit} & A\-D\-C bit resolution \\
+\hline
+{\em Psc} & A\-D\-C clock prescaler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+adc\-\_\-t object 
+\end{DoxyReturn}

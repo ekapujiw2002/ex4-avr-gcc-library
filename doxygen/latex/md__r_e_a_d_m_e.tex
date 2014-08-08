@@ -1,0 +1,47 @@
+An interrupt driven U\-A\-R\-T Library for 8-\/bit A\-V\-R microcontrollers
+
+Maintained by Andy Gock
+
+\href{https://github.com/andygock/avr-uart}{\tt https\-://github.\-com/andygock/avr-\/uart}
+
+Derived from original library by Peter Fleury
+
+Interrupt U\-A\-R\-T library using the built-\/in U\-A\-R\-T with transmit and receive circular buffers.
+
+An interrupt is generated when the U\-A\-R\-T has finished transmitting or receiving a byte. The interrupt handling routines use circular buffers for buffering received and transmitted data.
+
+\section*{Setting up}
+
+The {\ttfamily U\-A\-R\-T\-\_\-\-R\-Xn\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} and {\ttfamily U\-A\-R\-T\-\_\-\-T\-Xn\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} constants define the size of the circular buffers in bytes. Note that these constants must be a power of 2. You may need to adapt this constants to your target and your application by adding to your compiler options\-: \begin{DoxyVerb}    -DUART_RXn_BUFFER_SIZE=nn -DUART_TXn_BUFFER_SIZE=nn
+\end{DoxyVerb}
+
+
+{\ttfamily R\-Xn} and {\ttfamily T\-Xn} refer to U\-A\-R\-T number, for U\-A\-R\-T3 with 128 byte buffers, add\-: \begin{DoxyVerb}    -DUART_RX3_BUFFER_SIZE=128 -DUART_TX3_BUFFER_SIZE=128
+\end{DoxyVerb}
+
+
+U\-A\-R\-T0 is always enabled by default, to enable the other available U\-A\-R\-Ts, add the following to your compiler options (or symbol options), for the relevant U\-S\-A\-R\-T number\-: \begin{DoxyVerb}    -DUSART1_ENABLED -DUSART2_ENABLED -DUSART3_ENABLED
+\end{DoxyVerb}
+
+
+To enable large buffer support (over 256 bytes, up to 2$^\wedge$16 bytes) use\-: \begin{DoxyVerb}    -DUSARTn_LARGE_BUFFER
+\end{DoxyVerb}
+
+
+Where n = U\-S\-A\-R\-T number.
+
+Supports A\-V\-R devices with up to 4 hardware U\-S\-A\-R\-Ts.
+
+\section*{Documentation}
+
+Doxygen based documentation will be coming soon.
+
+\section*{Notes}
+
+\subsection*{Buffer overflow behaviour}
+
+When the R\-X circular buffer is full, and it receives further data from the U\-A\-R\-T, a buffer overflow condition occurs. Any new data is dropped. The R\-X buffer must be read before any more incoming data from the U\-A\-R\-T is placed into the R\-X buffer.
+
+If the T\-X buffer is full, and new data is sent to it using one of the {\ttfamily uart\-N\-\_\-put$\ast$()} functions, this function will loop and wait until the buffer is not full any more. It is important to make sure you have not disabled your U\-A\-R\-T transmit interrupts ({\ttfamily T\-X\-E\-N$\ast$}) elsewhere in your application (e.\-g with {\ttfamily cli()}) before calling the {\ttfamily uart\-N\-\_\-put$\ast$()} functions, as the application will lock up. The U\-A\-R\-T interrupts are automatically enabled when you use the {\ttfamily uart\-N\-\_\-init()} functions. This is probably not the idea behaviour, I'll probably fix this some time.
+
+For now, make sure {\ttfamily T\-X\-E\-N$\ast$} interrupts are enabled when calling {\ttfamily uart\-N\-\_\-put$\ast$()} functions. This should not be an issue unless you have code elsewhere purposely turning it off. 

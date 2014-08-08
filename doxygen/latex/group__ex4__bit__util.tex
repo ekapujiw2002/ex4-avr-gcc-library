@@ -1,0 +1,231 @@
+\hypertarget{group__ex4__bit__util}{\section{Bit Utility}
+\label{group__ex4__bit__util}\index{Bit Utility@{Bit Utility}}
+}
+
+
+Macros for easy bit manipulation on A\-V\-R.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}{B\-I\-T}(x)~(0x01 $<$$<$ (x))
+\item 
+\#define \hyperlink{group__ex4__bit__util_gafbad7382b813042047886a12523a1d5f}{L\-O\-N\-G\-B\-I\-T}(x)~((uint32\-\_\-t) 0x00000001 $<$$<$ (x))
+\item 
+\#define \hyperlink{group__ex4__bit__util_gaec77c58e5539c8e65add55cb11b4d21a}{bit\-\_\-get}(p, m)~((p) \& (m))
+\item 
+\#define \hyperlink{group__ex4__bit__util_ga05adecac4f6f6e2d5e6bf43b496bbc9f}{bit\-\_\-set}(p, m)~((p) $|$= (m))
+\item 
+\#define \hyperlink{group__ex4__bit__util_ga4befea8f39b82371375372c32827a577}{bit\-\_\-clear}(p, m)~((p) \&= $\sim$(m))
+\item 
+\#define \hyperlink{group__ex4__bit__util_ga31de5ed72e62c2b845d7a31f04620a2b}{bit\-\_\-toggle}(p, m)~((p) $^\wedge$= (m))
+\item 
+\#define \hyperlink{group__ex4__bit__util_ga05ade03b93a62632d066d5f2ce5aed26}{bit\-\_\-write}(c, p, m)~(c ? \hyperlink{group__ex4__bit__util_ga05adecac4f6f6e2d5e6bf43b496bbc9f}{bit\-\_\-set}(p,m) \-: \hyperlink{group__ex4__bit__util_ga4befea8f39b82371375372c32827a577}{bit\-\_\-clear}(p,m))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Macros for easy bit manipulation on A\-V\-R. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{ #include "bit\_util.h"} 
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+Based on \href{http://www.avrfreaks.net}{\tt http\-://www.\-avrfreaks.\-net} 
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+E\-X4 \href{mailto:ekapujiw2002@gmail.com}{\tt ekapujiw2002@gmail.\-com} \href{http://ex4-tech.id.or.id}{\tt http\-://ex4-\/tech.\-id.\-or.\-id} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}{\index{Bit Utility@{Bit Utility}!B\-I\-T@{B\-I\-T}}
+\index{B\-I\-T@{B\-I\-T}!Bit Utility@{Bit Utility}}
+\subsubsection[{B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(0x01 $<$$<$ (x))}}\label{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}
+Set bit at position x \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & bit number(0-\/7) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\-\_\-t value from 0-\/255 
+\end{DoxyReturn}
+\hypertarget{group__ex4__bit__util_ga4befea8f39b82371375372c32827a577}{\index{Bit Utility@{Bit Utility}!bit\-\_\-clear@{bit\-\_\-clear}}
+\index{bit\-\_\-clear@{bit\-\_\-clear}!Bit Utility@{Bit Utility}}
+\subsubsection[{bit\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}\#define bit\-\_\-clear(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~((p) \&= $\sim$(m))}}\label{group__ex4__bit__util_ga4befea8f39b82371375372c32827a577}
+Clear value for a value of p at bit number m. Example \-: To clear bit 3 on P\-I\-N\-A 
+\begin{DoxyCode}
+  \hyperlink{group__ex4__bit__util_ga4befea8f39b82371375372c32827a577}{bit\_clear}(PINA, \hyperlink{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}{BIT}(3));
+\end{DoxyCode}
+ \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pin,port, or value \\
+\hline
+{\em m} & Bit number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__bit__util_gaec77c58e5539c8e65add55cb11b4d21a}{\index{Bit Utility@{Bit Utility}!bit\-\_\-get@{bit\-\_\-get}}
+\index{bit\-\_\-get@{bit\-\_\-get}!Bit Utility@{Bit Utility}}
+\subsubsection[{bit\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}\#define bit\-\_\-get(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~((p) \& (m))}}\label{group__ex4__bit__util_gaec77c58e5539c8e65add55cb11b4d21a}
+Get value for a value of p at bit number m. Example \-: To read bit 3 on P\-I\-N\-A 
+\begin{DoxyCode}
+  \textcolor{keywordflow}{if}(\hyperlink{group__ex4__bit__util_gaec77c58e5539c8e65add55cb11b4d21a}{bit\_get}(PINA, \hyperlink{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}{BIT}(3)))
+  \{
+        ..........
+  \}
+\end{DoxyCode}
+ \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pin,port, or value \\
+\hline
+{\em m} & Bit number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\-\_\-t bit value of m(0/1) 
+\end{DoxyReturn}
+\hypertarget{group__ex4__bit__util_ga05adecac4f6f6e2d5e6bf43b496bbc9f}{\index{Bit Utility@{Bit Utility}!bit\-\_\-set@{bit\-\_\-set}}
+\index{bit\-\_\-set@{bit\-\_\-set}!Bit Utility@{Bit Utility}}
+\subsubsection[{bit\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}\#define bit\-\_\-set(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~((p) $|$= (m))}}\label{group__ex4__bit__util_ga05adecac4f6f6e2d5e6bf43b496bbc9f}
+Set value for a value of p at bit number m. Example \-: To set bit 3 on P\-I\-N\-A 
+\begin{DoxyCode}
+  \hyperlink{group__ex4__bit__util_ga05adecac4f6f6e2d5e6bf43b496bbc9f}{bit\_set}(PINA, \hyperlink{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}{BIT}(3));
+\end{DoxyCode}
+ \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pin,port, or value \\
+\hline
+{\em m} & Bit number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__bit__util_ga31de5ed72e62c2b845d7a31f04620a2b}{\index{Bit Utility@{Bit Utility}!bit\-\_\-toggle@{bit\-\_\-toggle}}
+\index{bit\-\_\-toggle@{bit\-\_\-toggle}!Bit Utility@{Bit Utility}}
+\subsubsection[{bit\-\_\-toggle}]{\setlength{\rightskip}{0pt plus 5cm}\#define bit\-\_\-toggle(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~((p) $^\wedge$= (m))}}\label{group__ex4__bit__util_ga31de5ed72e62c2b845d7a31f04620a2b}
+Toggle value for a value of p at bit number m. Example \-: To toggle bit 3 on P\-I\-N\-A 
+\begin{DoxyCode}
+  \hyperlink{group__ex4__bit__util_ga31de5ed72e62c2b845d7a31f04620a2b}{bit\_toggle}(PINA, \hyperlink{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}{BIT}(3));
+\end{DoxyCode}
+ \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pin,port, or value \\
+\hline
+{\em m} & Bit number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__bit__util_ga05ade03b93a62632d066d5f2ce5aed26}{\index{Bit Utility@{Bit Utility}!bit\-\_\-write@{bit\-\_\-write}}
+\index{bit\-\_\-write@{bit\-\_\-write}!Bit Utility@{Bit Utility}}
+\subsubsection[{bit\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}\#define bit\-\_\-write(
+\begin{DoxyParamCaption}
+\item[{}]{c, }
+\item[{}]{p, }
+\item[{}]{m}
+\end{DoxyParamCaption}
+)~(c ? {\bf bit\-\_\-set}(p,m) \-: {\bf bit\-\_\-clear}(p,m))}}\label{group__ex4__bit__util_ga05ade03b93a62632d066d5f2ce5aed26}
+Set value for a value of p at bit number m based on value of c. Example \-: To set bit 4 on P\-O\-R\-T\-A based on bit 2 on P\-I\-N\-A \-: 
+\begin{DoxyCode}
+  \hyperlink{group__ex4__bit__util_ga05ade03b93a62632d066d5f2ce5aed26}{bit\_write}(\hyperlink{group__ex4__bit__util_gaec77c58e5539c8e65add55cb11b4d21a}{bit\_get}(PINA, \hyperlink{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}{BIT}(2)), PORTA, \hyperlink{group__ex4__bit__util_gad27cc17b25bb93134368d5eb21126eae}{BIT}(4));
+\end{DoxyCode}
+ \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Bit based value \\
+\hline
+{\em p} & Pin,port, or value \\
+\hline
+{\em m} & Bit number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+\hypertarget{group__ex4__bit__util_gafbad7382b813042047886a12523a1d5f}{\index{Bit Utility@{Bit Utility}!L\-O\-N\-G\-B\-I\-T@{L\-O\-N\-G\-B\-I\-T}}
+\index{L\-O\-N\-G\-B\-I\-T@{L\-O\-N\-G\-B\-I\-T}!Bit Utility@{Bit Utility}}
+\subsubsection[{L\-O\-N\-G\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-N\-G\-B\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((uint32\-\_\-t) 0x00000001 $<$$<$ (x))}}\label{group__ex4__bit__util_gafbad7382b813042047886a12523a1d5f}
+Define 32 bit value with position bit x \begin{DoxyAuthor}{Author}
+E\-X4 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & bit number(0-\/31) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\-\_\-t unsigned long return 
+\end{DoxyReturn}
