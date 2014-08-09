@@ -18,14 +18,14 @@ SPI device 74hc595
 #define HC595_ST_CP_POS PB3      //Store Clock (ST_CP) pin location
 
 //Low level macros to change data (DS)lines
-#define HC595DataHigh() (HC595_PORT|=(1<<HC595_DS_POS))
-#define HC595DataLow() (HC595_PORT&=(~(1<<HC595_DS_POS)))
+#define HC595DataHigh() (HC595_PORT|=_BV(HC595_DS_POS))
+#define HC595DataLow() (HC595_PORT&=~_BV(HC595_DS_POS))
 
 //Initialize HC595 System
 void HC595Init()
 {
    //Make the Data(DS), Shift clock (SH_CP), Store Clock (ST_CP) lines output
-   HC595_DDR|=((1<<HC595_SH_CP_POS)|(1<<HC595_ST_CP_POS)|(1<<HC595_DS_POS));
+   HC595_DDR|=_BV(HC595_SH_CP_POS)|_BV(HC595_ST_CP_POS)|_BV(HC595_DS_POS);
    //HC595_DDR|=(1<<PB0);
    HC595_PORT = 0;
 }
@@ -34,18 +34,18 @@ void HC595Init()
 void HC595Pulse()
 {
    //Pulse the Shift Clock
-   HC595_PORT|=(1<<HC595_SH_CP_POS);//HIGH
-   HC595_PORT&=(~(1<<HC595_SH_CP_POS));//LOW
+   HC595_PORT|=_BV(HC595_SH_CP_POS);//HIGH
+   HC595_PORT&=~_BV(HC595_SH_CP_POS);//LOW
 }
 
 //Sends a clock pulse on ST_CP line
 void HC595Latch()
 {
    //Pulse the Store Clock
-   HC595_PORT|=(1<<HC595_ST_CP_POS);//HIGH
+   HC595_PORT|=_BV(HC595_ST_CP_POS);//HIGH
    //_delay_loop_1(1);
    _delay_us(1);
-   HC595_PORT&=(~(1<<HC595_ST_CP_POS));//LOW
+   HC595_PORT&=~_BV(HC595_ST_CP_POS);//LOW
    //_delay_loop_1(1);
    _delay_us(1);
 }
