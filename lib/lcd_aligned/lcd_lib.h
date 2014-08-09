@@ -70,10 +70,10 @@
 */
 #define LCD_SIPO_RS	0
 #define LCD_SIPO_EN	1
-#define LCD_SIPO_D4	5
+#define LCD_SIPO_D4	2
 #define LCD_SIPO_D5	3
-#define LCD_SIPO_D6	2
-#define LCD_SIPO_D7	4
+#define LCD_SIPO_D6	4
+#define LCD_SIPO_D7	5
 
 /**
 * sipo constant define
