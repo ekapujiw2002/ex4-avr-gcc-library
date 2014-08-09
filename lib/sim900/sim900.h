@@ -6,7 +6,7 @@
 */
 
 /**
-*  @defgroup ex4_sim900 SIM900 Library
+*  @defgroup ex4_sim900 SIM900 GPRS Module
 *  @code #include "sim900.h" @endcode
 *
 *  @brief SIM900 library to handle sms, http request using uart library by Peter Fleury.
