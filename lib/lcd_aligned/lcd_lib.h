@@ -24,6 +24,11 @@
 #include <util/delay.h>
 #include <avr/pgmspace.h>
 
+//C++
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
 * Use file stream or not (printf functionality)
 */
@@ -550,6 +555,11 @@ static const lcd_struct_default = {
 * @brief	LCD structure data type definition
 */
 typedef struct lcd_struct lcd_t;
+
+//C++
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* LCD_LIB_H_ */
 /**@}*/
