@@ -15,6 +15,11 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
+//c++ wrapper
+#ifdef __cplusplus
+	extern "C" {
+#endif
+
 //usart macro
 #define UBRR_Value(aBaud) ((F_CPU/16/aBaud)-1)
 
@@ -76,5 +81,10 @@ char USART_InputStream(FILE *stream);
 void USART_SetStdin();
 //usart set as stdout
 void USART_SetStdout();
+
+//c++ wrapper
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* USART_LIB_H_ */
