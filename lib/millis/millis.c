@@ -40,6 +40,9 @@
 	#define PRESCALER 8
 #endif
 
+#ifndef defined(WGM01)
+	#error	"CPU type not supporting CTC mode"
+#endif
 #define REG_TCCRA		TCCR0A
 #define REG_TCCRB		TCCR0B
 #define REG_TIMSK		TIMSK0
@@ -60,6 +63,9 @@
 // 1KHz - 65.28MHz
 #define CLOCKSEL (_BV(CS10))
 #define PRESCALER 1
+#ifndef defined(WGM12)
+#error	"CPU type not supporting CTC mode"
+#endif
 
 #define REG_TCCRA		TCCR1A
 #define REG_TCCRB		TCCR1B
@@ -92,6 +98,10 @@
 	#define PRESCALER 8
 #endif
 
+#ifndef WGM21
+#error	"CPU type not supporting CTC mode"
+#endif
+#if defined(TCCR2A)
 #define REG_TCCRA		TCCR2A
 #define REG_TCCRB		TCCR2B
 #define REG_TIMSK		TIMSK2
@@ -104,6 +114,19 @@
 
 #define SET_TCCRA()	(REG_TCCRA = _BV(BIT_WGM))
 #define SET_TCCRB()	(REG_TCCRB = CLOCKSEL)
+#else
+	#define REG_TCCRA		TCCR2
+	#define REG_TCCRB		TCCR2
+	#define REG_TIMSK		TIMSK
+	#define REG_OCR			OCR2
+	#define BIT_WGM			WGM21
+	#define BIT_OCIE		OCIE2
+	#define ISR_VECT		TIMER2_COMPA_vect
+	#define pwr_enable()	power_timer2_enable()
+	#define pwr_disable()	power_timer2_disable()
+	#define SET_TCCRA()	(REG_TCCRA = _BV(BIT_WGM))
+	#define SET_TCCRB()	(REG_TCCRB = CLOCKSEL)
+#endif
 
 #else
 	#error "Bad MILLIS_TIMER set"
