@@ -24,9 +24,9 @@
 #include <util/delay.h>
 #include <avr/pgmspace.h>
 
-//C++
+//c++ wrapper
 #ifdef __cplusplus
-extern "C" {
+	extern "C" {
 #endif
 
 /**
@@ -556,7 +556,7 @@ static const lcd_struct_default = {
 */
 typedef struct lcd_struct lcd_t;
 
-//C++
+//c++ wrapper
 #ifdef __cplusplus
 }
 #endif
