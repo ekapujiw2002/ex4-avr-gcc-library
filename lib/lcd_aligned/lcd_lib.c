@@ -545,7 +545,8 @@ void LCDvisible()
 //Moves cursor by n poisitions left
 void LCDcursorLeft(const uint8_t n)
 {
-	for (uint8_t i=0;i<n;i++)
+	uint8_t i;
+	for (i=0;i<n;i++)
 	{
 		LCDsendCommand(0x10);
 	}
@@ -554,7 +555,8 @@ void LCDcursorLeft(const uint8_t n)
 //Moves cursor by n poisitions left
 void LCDcursorRight(const uint8_t n)
 {
-	for (uint8_t i=0;i<n;i++)
+	uint8_t i;
+	for (i=0;i<n;i++)
 	{
 		LCDsendCommand(0x14);
 	}
