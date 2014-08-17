@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>6.1</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
-    <ProjectGuid>{58628303-3d43-447b-893b-62d7e7aa8931}</ProjectGuid>
+    <ProjectGuid>{5e225014-97b6-4580-ba3a-a87a5cbc9969}</ProjectGuid>
     <avrdevice>ATmega32</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -96,7 +96,10 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="struct2.c">
+    <Compile Include="usart-lib-tes.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="cad\simulasi.DSN">
       <SubType>compile</SubType>
     </None>
     <None Include="lib\bmp085\bmp085.c">
@@ -132,9 +135,6 @@
     <None Include="lib\lcd_mixed\lcd_mixed.c.tes2">
       <SubType>compile</SubType>
     </None>
-    <None Include="struct1.c">
-      <SubType>compile</SubType>
-    </None>
     <None Include="lib\millis\millis.c">
       <SubType>compile</SubType>
     </None>
@@ -153,9 +153,9 @@
     <None Include="lib\uart2\uart.h">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="lcdmixed.c">
+    <None Include="lcd_sipo_tes.c">
       <SubType>compile</SubType>
-    </Compile>
+    </None>
     <Compile Include="lib\adc\adc.c">
       <SubType>compile</SubType>
     </Compile>
@@ -165,12 +165,12 @@
     <Compile Include="lib\bit_util\bit_util.h">
       <SubType>compile</SubType>
     </Compile>
-    <None Include="lib\i2c_master\I2C_master.c">
+    <Compile Include="lib\i2c_master\I2C_master.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="lib\i2c_master\I2C_master.h">
+    </Compile>
+    <Compile Include="lib\i2c_master\I2C_master.h">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
     <None Include="lib\i2c_slave\I2C_slave.c">
       <SubType>compile</SubType>
     </None>
@@ -210,12 +210,12 @@
     <None Include="lib\uart\uart.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="lib\usart_ex4\usart_lib.c">
+    <Compile Include="lib\usart_ex4\usart_lib.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="lib\usart_ex4\usart_lib.h">
+    </Compile>
+    <Compile Include="lib\usart_ex4\usart_lib.h">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
     <None Include="sim900-lib-tes.c">
       <SubType>compile</SubType>
     </None>
@@ -223,9 +223,6 @@
       <SubType>compile</SubType>
     </None>
     <None Include="lib\uart2\README.md">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="sim900a.c">
       <SubType>compile</SubType>
     </None>
     <None Include="my-lib-test.c">
@@ -253,6 +250,7 @@
     <Folder Include="lib\dht" />
     <Folder Include="lib\i2c_gps" />
     <Folder Include="lib\i2chw" />
+    <Folder Include="cad" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
