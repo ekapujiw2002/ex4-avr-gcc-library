@@ -1,0 +1,4 @@
+VERSION:3 SOURCE_TIMESTAMP:465B714F
+NODE:I LEVEL:0 LINE:23 ".\libx\spix\spix.h"
+NODE:F LEVEL:0 LINE:26 "spi_init(void)"
+NODE:F LEVEL:0 LINE:33 "spi_transmit(uint8_t data)"

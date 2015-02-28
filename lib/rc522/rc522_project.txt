@@ -1,0 +1,30 @@
+RC522 Read Write Example Using ATMEGA32
+
+Pin Connection
+RC522       AVR
+VCC         3,3V
+RST         NC (dont connect it)
+GND         GND
+IRQ         NC (dont connect it)
+MISO        MISO
+MOSI        MOSI
+SCK         SCK
+SS/SDA      SS (Any pin will do, here use PB4)
+
+See spix_config.h for further configuration
+All RC522 pin is 3,3V TTL level!!!
+
+Procedure for reading a block :
+1. read the serial id card using rc522_read_card_id
+2. if success, select the card using mfrc522_select_tag
+3. if success, login to a block using mfrc522_auth
+4. if success, read the block content using mfrc522_read_block
+5. halt the card using mfrc522_halt
+
+Procedure for writing a block :
+1. read the serial id card using rc522_read_card_id
+2. if success, select the card using mfrc522_select_tag
+3. if success, login to a block using mfrc522_auth
+4. if success, prepare 16byte buffer to be written using mfrc522_write_block
+5. halt the card using mfrc522_halt
+ 

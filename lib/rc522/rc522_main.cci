@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:465C780F
+NODE:I LEVEL:0 LINE:26 "C:\cvavreval\inc\mega32.h"
+NODE:I LEVEL:0 LINE:27 "C:\cvavreval\inc\delay.h"
+NODE:I LEVEL:0 LINE:30 "C:\cvavreval\inc\stdio.h"
+NODE:I LEVEL:0 LINE:31 "C:\cvavreval\inc\string.h"
+NODE:I LEVEL:0 LINE:34 ".\libx\spix\spix.h"
+NODE:I LEVEL:0 LINE:37 ".\libx\rc522\mfrc522.h"
+NODE:M LEVEL:0 LINE:40 "DEBUG_ON"
+NODE:F LEVEL:0 LINE:46 "usart_init(void)"
+NODE:F LEVEL:0 LINE:58 "rc522_check_reader(void)"
+NODE:F LEVEL:0 LINE:73 "rc522_read_card_id(uint8_t * card_id,uint16_t * card_type)"
+NODE:F LEVEL:0 LINE:103 "main(void)"

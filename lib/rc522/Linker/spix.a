@@ -1,0 +1,103 @@
+;/*
+; * spi.c
+; *
+; * Copyright 2013 Shimon <shimon@monistit.com>
+; *
+; * This program is free software; you can redistribute it and/or modify
+; * it under the terms of the GNU General Public License as published by
+; * the Free Software Foundation; either version 2 of the License, or
+; * (at your option) any later version.
+; *
+; * This program is distributed in the hope that it will be useful,
+; * but WITHOUT ANY WARRANTY; without even the implied warranty of
+; * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+; * GNU General Public License for more details.
+; *
+; * You should have received a copy of the GNU General Public License
+; * along with this program; if not, write to the Free Software
+; * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+; * MA 02110-1301, USA.
+; *
+; *
+; */
+;#include <spix.h>
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x80
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0x70
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0x60
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0x70
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;
+;#if SPI_CONFIG_AS_MASTER
+;void spi_init()
+; 0001 001B {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0001 001C 	SPI_DDR = (1<<SPI_MOSI)|(1<<SPI_SCK)|(1<<SPI_SS);
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+; 0001 001D 	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);//prescaler 16
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+; 0001 001E }
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+;
+;
+;uint8_t spi_transmit(uint8_t data)
+; 0001 0022 {
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+; 0001 0023 	SPDR = data;
+;PCODE: $00000017 VOL: 0
+;	data -> Y+0
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+; 0001 0024 	while(!(SPSR & (1<<SPIF)));
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+; 0001 0025 
+; 0001 0026 	return SPDR;
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+; 0001 0027 }
+;PCODE: $00000023 VOL: 0
+;
+;#else
+;void spi_init()
+;{
+;	SPI_DDR = (1<<SPI_MISO);
+;	SPCR = (1<<SPE);
+;}
+;
+;uint8_t spi_transmit(uint8_t data)
+;{
+;	while(!(SPSR & (1<<SPIF)));
+;	return SPDR;
+;}
+;#endif
